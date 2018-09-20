@@ -1,15 +1,19 @@
 # Programming Test - CRUD
 
-HOW TO INSTALL:
-1. Place "programmingtest" folder to your local apache server, commonly in htdocs/ or www/
-2. go to root directory "/programmingtest/", edit .env file, find part like this:
+HOW TO INSTALL (Tested on Windows 10):
+1. Download repository as zip file
+2. Extract to your web server htdocs
+3. change folder to "programmingtest"
+4. edit .env.example, change the (?) based on your Mysql server setting:
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
-    DB_PORT=4406
+    DB_PORT=?
     DB_DATABASE=programmingtest
-    DB_USERNAME=root
-    DB_PASSWORD=
+    DB_USERNAME=?
+    DB_PASSWORD=?
     
-    change for DB_PORT, DB_USERNAME, and DB_PASSWORD as your mysql server setting.
-3. go to root directory "/programmingtest/", import programmingtest.sql in your mysql client.
-3. Open link "localhost/programmingtest/public" in your web browser
+5. open cmd command, locate to root folder "/programmingtest", run the following:
+   1. composer update
+   2. php artisan key:generate
+6. Export programmingtest.sql to your local mysql server
+7. Open link "localhost/programmingtest/public" in your web browser
